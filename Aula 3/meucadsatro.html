@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de funcionários</h1>
+    <form action="#" method="post">
+
+        <label for="ativo na empresa">Ativo na empresa?</label><br>
+        <input type="radio" name="sim" id="css">
+        <label for="sim">Sim</label>
+        <input type="radio" name="não" id="css">
+        <label for="não">Não</label><br><br>
+
+
+        <label for="Nome">Nome:</label><br>
+        <input type="text" name="nome" placeholder="Digite seu nome"><br><br>
+
+        <label for="CPF">CPF:</label><br>
+        <input type="number" name="CPF" placeholder="Digite seu CPF"><br><br>
+
+        <label for="Cargo">Cargo:</label><br>
+        <select name="Cargo" id="Cargo">
+            <option value="">Selecione</option>
+            <option value="Gerente">Gerente Administrativo</option>
+            <option value="Analista de markiting">Analista de Markiting</option>
+            <option value="Estoquista">Estoquista</option>
+            <option value="Assistente de Vendas">Assistenta de Vendas</option>
+            <option value="Atendente/Recepcionista">Atendente/Recepcionista</option>
+            <option value="Auxiliar de Limpeza">Auxiliar de Limpeza</option>
+        </select><br><br>
+
+        <label for="Data">Data de admissão:</label><br>
+        <input type="Date" name="Date" placeholder="Digite sua data de contratação"><br><br>
+
+         <label for="Telefone">Telefone:</label><br>
+        <input type="tel" name="telefone" placeholder="Digite seu telefone"><br><br>
+
+        <label for="Email">E-mail corporativo:</label><br>
+        <input type="Email" name="Email" placeholder="Digite seu e-mail" ><br><br>
+
+        <label for="setor/departamento">Setor/Departamento:</label><br>
+        <input type="text" name="setor/departamento" placeholder="Digite aqui..."><br><br>
+
+        <button id="enviar">Enviar</button>
+        <button id="cancelar">Cancelar</button>
+    </form>
+</body>
+</html>
