@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resort Dourado</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc; /* bege claro */
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #b8860b; /* dourado escuro */
+      color: white;
+      padding: 20px;
+    }
+    nav {
+      background-color: #daa520; /* dourado */
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px 20px;
+      line-height: 1.7;
+    }
+    section img {
+      width: 300px;
+      border-radius: 10px;
+      margin: 15px auto;
+      display: block;
+    }
+    footer {
+      background-color: #b8860b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .info-list {
+      max-width: 700px;
+      margin: 20px auto;
+      text-align: left;
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .info-list li {
+      background-color: #daa520;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      flex: 1 1 250px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+    .reserva {
+      margin: 20px 0;
+    }
+    .reserva input, .reserva select {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .preco {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #b8860b;
+    }
+    p {
+      max-width: 800px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Resort Dourado</h1>
+    <p>Luxo, conforto e experiências inesquecíveis à beira-mar</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#acomodacoes">Acomodações</a>
+    <a href="#comodidades">Comodidades</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#reserva">Reserva</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre o Resort</h2>
+    <p>O Resort Dourado é um refúgio exclusivo localizado à beira-mar, oferecendo conforto, sofisticação e um ambiente acolhedor para toda a família.</p>
+    <p>Nosso objetivo é proporcionar momentos inesquecíveis com atendimento personalizado e experiências únicas.</p>
+    <ul class="info-list">
+      <li>Localização privilegiada na praia mais bonita da região.</li>
+      <li>Suítes luxuosas com vista para o mar e varanda privativa.</li>
+      <li>Restaurante com gastronomia de alta qualidade.</li>
+      <li>Spa completo com massagens e terapias relaxantes.</li>
+      <li>Piscina de borda infinita e áreas de lazer para todas as idades.</li>
+      <li>Atividades recreativas para crianças e adultos.</li>
+    </ul>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Praia paradisíaca">
+  </section>
+
+  <section id="acomodacoes">
+    <h2>Acomodações</h2>
+    <p>Escolha a suíte perfeita para sua estadia, com conforto, elegância e vista privilegiada.</p>
+    <img src="https://images.unsplash.com/photo-1559599101-bbf7a1c6093b" alt="Quarto de resort">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Piscina do resort">
+  </section>
+
+  <section id="comodidades">
+    <h2>Comodidades</h2>
+    <p>Para seu conforto e entretenimento, oferecemos diversas opções:</p>
+    <ul class="info-list">
+      <li>Spa e centro de bem-estar</li>
+      <li>Restaurante e bar na praia</li>
+      <li>Academia equipada</li>
+      <li>Atividades esportivas e recreativas</li>
+      <li>Salão de eventos e casamentos</li>
+    </ul>
+    <img src="https://images.unsplash.com/photo-1556228724-4f6df6f7f1d5" alt="Spa do resort">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Restaurante do resort">
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria do Resort</h2>
+    <img src="https://images.unsplash.com/photo-1533777324565-a040eb52fc7b" alt="Praia do resort">
+    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Jardim do resort">
+    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c4" alt="Área de lazer">
+    <img src="https://images.unsplash.com/photo-1542718617-7f5c25e61a6f" alt="Camarote de frente para o mar">
+  </section>
+
+  <section id="reserva">
+    <h2>Faça sua Reserva</h2>
+    <div class="reserva">
+      <p>Escolha suas datas de check-in e check-out:</p>
+      <input type="date" name="checkin" placeholder="Check-in">
+      <input type="date" name="checkout" placeholder="Check-out">
+      <p>Tipo de Suíte:</p>
+      <select name="suite">
+        <option value="standard">Standard - R$ 500/noite</option>
+        <option value="luxo">Luxo - R$ 800/noite</option>
+        <option value="presidencial">Presidencial - R$ 1200/noite</option>
+      </select>
+      <p class="preco">Consulte preços e disponibilidade antes de confirmar a reserva.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Contato: contato@resortdourado.com | Telefone: (00) 1234-5678</p>
+    <p>&copy; 2025 Resort Dourado. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+

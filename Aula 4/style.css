@@ -1,0 +1,12 @@
+body{
+    h1{
+        color: blue;
+        font-size: large;
+        text-align: center;
+    }
+    p{
+        color: brown;
+        font-size: large ;
+        text-align: center;
+    }
+}
