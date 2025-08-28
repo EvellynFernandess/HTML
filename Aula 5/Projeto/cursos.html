@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🏫Sistema de Cadastro Escolar</h1>
+    <p>Bem-vindos ao sistema de cadastro da nossa escola virtual</p>
+    <h3>📋Menu de Cadastro</h3>
+    <a href="/aluno.html"><button>Cadastro de Aluno</button></a>
+    <a href="/cursos.html"><button>Cadastro de Cursos</button></a>
+    <a href="/livro.html"><button>Cadastro de Livro</button></a>
+    <a href="/professor.html"><button>Cadastro de Professor</button></a>
+    <div class="container">
+
+       <div class="formulário">
+       <h4>📚Cadastro do Curso:</h4>
+
+       <label for="nome">Nome do Curso:</label><br>
+       <input type="text"><br><br>
+
+       <label for="código">Código do Curso:</label><br>
+       <input type="text"><br><br>
+
+       <label for="categoria">Categoria:</label><br>
+       <select name="categoria" id="Categoria">
+       <option value="">Selecione</option>
+       <option value="Ciências">Ciências Exatas</option>
+       <option value="Ciências">Ciências Humanas</option>
+       <option value="Ciencias">Ciências Biologicas</option>
+       <option value="Linguagens">linguagens</option>
+       <option value="Artes">Artes</option>
+    </select><br><br>
+
+
+    <label for="Duração">Duração (meses):</label><br>
+    <input type="number"><br><br>
+
+   <label for="Modalidade">Modalidade:</label><br>
+  <input type="radio" name="presencial">Presencial <br>
+  <input type="radio" name="Online" id="">Online <br>
+  <input type="radio" name="Híbrido" id="">Híbrido <br><br>
+
+  <label for="pre-requisitos">Pré-requisitos:</label><br>
+  <input type="checkbox" name="Ensino Médio" id="">Ensino Médio Completo <br>
+  <input type="checkbox" name="Curso Básico" id="">Curso Básico <br>
+  <input type="checkbox" name="experiencias" id="">Experiência Prévia <br><br>
+
+  <label for="descrição">Descrição do Curso:</label><br>
+  <textarea name="observações" id=""></textarea><br><br>
+
+  <button>Cadastrar Aluno</button>
+  <button>Limpar Dados</button>
+
+   
+
+    </div>
+
+    </div>
+</body>
+</html>

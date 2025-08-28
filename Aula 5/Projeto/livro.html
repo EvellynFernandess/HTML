@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🏫Sistema de Cadastro Escolar</h1>
+    <p>Bem-vindos ao sistema de cadastro da nossa escola virtual</p>
+    <h3>📋Menu de Cadastro</h3>
+    <a href="/aluno.html"><button>Cadastro de Aluno</button></a>
+    <a href="/cursos.html"><button>Cadastro de Cursos</button></a>
+    <a href="/livro.html"><button>Cadastro de Livro</button></a>
+    <a href="/professor.html"><button>Cadastro de Professor</button></a>
+    <div class="container">
+
+       <div class="formulário">
+       <h4>📖Cadastro de Livro (Biblioteca)</h4>
+       <label for="título">Título do Livro:</label><br>
+       <input type="text"><br><br>
+<label for="autor">Autor:</label><br>
+       <input type="text"><br><br>
+
+       <label for="ano">Ano de Publicação:</label><br>
+       <input type="number"><br><br>
+
+       <label for="editora">Editora:</label><br>
+       <input type="text"><br><br>
+
+       <label for="genero">Gênero:</label><br>
+       <select name="genero" id="genero">
+       <option value="">Selecione</option>
+       <option value="ficção">Ficção</option>
+       <option value="biografia">Biografia</option>
+       <option value="historia">História</option>
+       <option value="ciencias">Ciências</option>
+       <option value="Didático">Didático</option>
+       <option value="infantil">Infantil</option>
+    </select><br><br>
+
+
+    <label for="Número de paginas">Número de Páginas:</label><br>
+    <input type="number"><br><br>
+
+   <label for="Condição">Condição:</label><br>
+  <input type="radio" name="novo">Novo <br>
+  <input type="radio" name="usado e bom" id="">Usado - Bom Estado<br>
+  <input type="radio" name="usado e regular" id="">Usado - Estado Regular <br><br>
+
+  <label for="lacalização">Localização da Biblioteca:</label>
+  <input type="text">
+
+  <label for="pre-requisitos">Pré-requisitos:</label><br>
+  <input type="checkbox" name="ilustrado">Ilustrado <br>
+  <input type="checkbox" name="Capa dura">Capa Dura <br>
+  <input type="checkbox" name="edição especial">Edição Especial<br><br>
+
+  <button>Cadastrar Livro</button>
+  <button>Limpar Dados</button>
+
+   
+
+    </div>
+
+    </div>
+</body>
+</html>
