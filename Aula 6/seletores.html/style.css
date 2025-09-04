@@ -1,0 +1,85 @@
+p{
+    color: blue;
+}
+#primeiro{
+    background-color: yellow;
+}
+.bloco1{
+    color: green;
+}
+li{
+    color: red;
+}
+#segundo{
+    background-color: bisque;
+}
+#terceiro{
+    background-color: gray;
+}
+.bloco2{
+    color: blueviolet;
+}
+#quarto{
+    text-align: center;
+}
+#quinto{
+    color: brown;
+}
+#sexto{
+    color: aquamarine;
+}
+.bloco3{
+    font-weight: bold;
+}
+img{
+    border: 8px solid bisque;
+}
+.bloco4 p{
+    color: palevioletred;
+}
+.bloco5{
+    color: pink;
+}
+.bloco6{
+    color: aqua;
+}
+#quinto{
+    font-family: Arial;
+}
+.bloco7{
+    font-weight: bold;
+}
+.bloco8{
+    font-style: italic;
+}
+.bloco9{
+    text-decoration: underline;
+}
+.bloco10{
+    background-color: blueviolet;
+}
+#sexto{
+    color: red;
+}
+#setimo{
+    color: green;
+}
+#oitavo{
+    color: blue;
+}
+span{
+    font-weight: bold;
+}
+#nono{
+    background-color: bisque;
+    border: 6px solid burlywood;
+}
+.bloco11{
+    text-decoration: underline;
+}
+.bloco12{
+    color: paleturquoise;
+}
+.bloco12 a{
+    color: paleturquoise;
+} 
