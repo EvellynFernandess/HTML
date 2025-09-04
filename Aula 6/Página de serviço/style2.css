@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root{
+  --gold: #d4af37;
+  --gold-dark: #b8860b;
+  --text: #4b3d2a;
+  --beige: #fffaf2;
+  --beige-2: #fff5e1;
+  --footer: #4b3d2a;
+  --card-border: #e9e2d3;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+body{
+  font-family:"Playfair Display", serif;
+  line-height:1.6;
+  color:var(--text);
+  background:var(--beige);
+}
+
+/* Container */
+.container{
+  width:90%;
+  max-width:1000px;
+  margin:0 auto;
+  padding:20px;
+}
+
+/* Cabeçalho */
+header{
+  background:var(--beige-2);
+  padding:20px 0;
+  border-bottom:2px solid var(--gold);
+}
+header > .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* === LOGO NOVA (svg + texto) === */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+.logo-text{
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:var(--gold-dark);
+}
+.logo-text span{ color:var(--gold); }
+
+/* Navegação */
+.links-navegacao{ list-style:none; display:flex; }
+.links-navegacao li{ margin-left:20px; }
+.links-navegacao a{
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+  transition:.3s;
+}
+.links-navegacao a:hover{ color:var(--gold); }
+
+/* Hero */
+.secao-principal{
+  background:
+    linear-gradient(rgba(212,175,55,.55), rgba(212,175,55,.55)),
+    url("resort-banner.jpg") center/cover no-repeat;
+  color:#fff;
+  padding:100px 20px;
+  text-align:center;
+}
+.secao-principal h1{
+  font-size:42px;
+  margin-bottom:20px;
+  text-shadow:2px 2px 8px rgba(0,0,0,.35);
+}
+.secao-principal p{
+  font-size:20px;
+  margin-bottom:30px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Botão */
+.botao{
+  display:inline-block;
+  background:var(--gold);
+  color:#fff;
+  padding:14px 36px;
+  text-decoration:none;
+  border-radius:28px;
+  cursor:pointer;
+  border:none;
+  font-weight:700;
+  transition:.3s;
+}
+.botao:hover{ background:var(--gold-dark); }
+
+/* Recursos */
+.recursos{ padding:60px 0; background:#fff; }
+.titulo-secao{ text-align:center; margin-bottom:40px; }
+.titulo-secao h2{
+  font-size:32px;
+  color:var(--text);
+  margin-bottom:10px;
+  border-bottom:2px solid var(--gold);
+  display:inline-block;
+  padding-bottom:6px;
+}
+.grade-recursos{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.cartao-recurso{
+  background:var(--beige);
+  padding:20px;
+  border:1px solid var(--card-border);
+  text-align:center;
+  flex:1 1 30%;
+  min-width:250px;
+  border-radius:12px;
+  box-shadow:0 6px 14px rgba(0,0,0,.06);
+}
+.icone-recurso{
+  width:60px; height:60px;
+  background:var(--gold);
+  color:#fff;
+  border-radius:50%;
+  margin:0 auto 15px;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:20px;
+}
+
+/* Sobre */
+.sobre{ padding:60px 0; }
+.conteudo-sobre{ display:flex; flex-wrap:wrap; gap:30px; }
+.texto-sobre{ flex:1; min-width:300px; }
+.texto-sobre h2{ font-size:28px; margin-bottom:20px; color:var(--text); }
+.imagem-sobre{ flex:1; min-width:300px; }
+.imagem-sobre img{ width:100%; border-radius:12px; }
+
+/* Contato */
+.contato{ padding:60px 0; }
+.contato-conteudo{
+  display:flex; gap:40px; max-width:900px; margin:0 auto; flex-wrap:wrap; align-items:flex-start;
+}
+.contato-texto{ flex:1 1 250px; color:var(--text); }
+.contato-texto h2{
+  font-size:28px; margin-bottom:20px;
+  border-left:5px solid var(--gold); padding-left:15px;
+}
+.formulario-contato{
+  flex:2 1 400px; background:var(--beige);
+  padding:20px; border-radius:8px; border:1px solid var(--card-border);
+}
+.formulario-contato label{
+  display:block; margin-bottom:6px; font-weight:700; color:var(--text);
+}
+.formulario-contato input, .formulario-contato textarea{
+  width:100%; padding:10px 12px; margin-bottom:15px;
+  border:1px solid #cfc6b4; border-radius:8px; font-size:16px;
+}
+.formulario-contato textarea{ min-height:110px; }
+
+/* Rodapé */
+footer{
+  background:var(--footer);
+  color:#fff;
+  padding:40px 0;
+  text-align:center;
+}
+.conteudo-rodape{
+  display:flex; justify-content:space-between; flex-wrap:wrap;
+  max-width:1000px; margin:0 auto 30px auto; padding:0 20px;
+}
+.secao-rodape{ flex:1 1 30%; min-width:200px; margin-bottom:20px; text-align:left; }
+.secao-rodape h3{ margin-bottom:10px; color:var(--gold); }
+.rodape-inferior{
+  border-top:1px solid #7a6d59;
+  padding-top:20px; max-width:1000px; margin:0 auto; padding-left:20px; padding-right:20px;
+}
+
+/* Responsivo */
+@media (max-width:768px){
+  .links-navegacao{ flex-direction:column; align-items:flex-start; }
+  .grade-recursos{ flex-direction:column; }
+  .conteudo-sobre{ flex-direction:column; }
+  .conteudo-rodape{ flex-direction:column; text-align:center; }
+}
+
+
+
