@@ -1,0 +1,155 @@
+td{
+    padding: 10px;
+}
+
+
+
+.tabela1{
+    border: solid black;
+}
+
+.compras th{
+    background-color: rgb(0, 0, 94);
+    color: white;
+}
+
+.tabela2{
+    border: solid black;
+}
+.tabela2 th{
+    background-color: gray;
+}
+
+.tabela3{
+    border: solid black;
+}
+.tabela3 td{
+    color: blue;
+}
+
+.tabela4{
+    border: solid black;
+    font-family: Arial;
+}
+
+.tabela5{
+    border: solid black;
+}
+.tabela5 th{
+    font-size: x-large; 
+    background-color: black;
+    color: white;
+}
+
+.tabela6{
+    background-color: bisque;
+    border: solid black;
+}
+
+.tabela7{
+    border: solid black;
+}
+.tabela7 td{
+    text-align: center;
+}
+
+.tabela8{
+    border:10px solid black;
+}
+
+.tabela9{
+    border: solid black;
+}
+.tabela9 th{
+    color:red;
+}
+
+.tabela10{
+    border: solid black;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+}
+
+.tabela11 {
+    border: solid black;
+}
+
+.frutas{
+    font-style: italic;
+}
+
+.tabela12{
+    border: solid black;
+}
+.tabela12 td{
+    font-weight: bold;
+}
+
+.tabela13{
+    border: solid black;
+}
+
+.linha1{
+    background-color: rgb(106, 106, 255);
+}
+
+
+.tabela14{
+    border: solid black;
+}
+.tabela14 td{
+    color: green;
+}
+
+.tabela15{
+    border: solid black;
+}
+.tabela15 td{
+    font-style: oblique ;
+    font-size: larger;
+
+}
+
+.tabela16{
+    border: solid black;
+}
+
+.linha2{
+    background-color: aqua;
+}
+
+.tabela17{
+    border: solid black;
+    text-align: center;
+}
+.tabela17 th{
+    background-color: blue;
+    color: beige;
+}
+
+.tabela18{
+    border: solid black;
+}
+.tabela18 td{
+    text-transform: uppercase;
+}
+
+.tabela19{
+    border: solid black;
+    text-align: center;
+}
+.tabela19 th{
+    font-family: Arial;
+}
+
+.tabela20{
+    border: solid black;
+    text-align: center;
+}
+.tabela20 th{
+    background-color: brown;
+
+}
+
+
