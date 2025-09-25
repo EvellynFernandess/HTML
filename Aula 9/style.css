@@ -1,0 +1,50 @@
+.bloco1{
+    border: solid black;
+    text-align: center;
+    font-size: small ;
+}
+
+.bloco1 th{
+    background-color: black;
+    color: white;
+}
+.bloco1 td{
+    background-color: antiquewhite;
+}
+
+.bloco2{
+    border: solid rgb(0, 0, 0);
+    text-align: center;
+    font-size: small;
+}
+
+.bloco2 th{
+    background-color: black;
+    color: white;
+}
+.bloco2 td{
+    background-color: antiquewhite;
+}
+.bloco2 td:nth-child(2){
+    font-weight: bold;
+    color: blue;
+}
+.vencedor td{
+    background-color: rgb(153, 97, 14);
+}
+
+img{
+    height: 40px;
+}
+
+.bloco3{
+    text-align: center;
+    border: 8px solid rgb(92, 90, 90);
+}
+.bloco3 th{
+    background-color: black;
+    color: white;
+}
+.bloco3 td{
+    background-color: bisque;
+}
