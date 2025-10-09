@@ -1,0 +1,34 @@
+header{
+    background-color: blueviolet;
+    text-align: center;
+    border-radius: 8px;
+}
+.bloco1{
+    background-color: rgb(185, 135, 231);
+    border: solid;
+    font-size: larger;
+    flex-wrap: wrap;
+}
+.bloco2{
+    background-color:rgb(185, 135, 231) ;
+    border: solid;
+    font-size: larger;
+}
+.bloco2 article{
+    background-color: rgb(65, 6, 120);
+    color: aliceblue;
+    font-size: medium;
+}
+aside{
+    background-color: rgb(115, 115, 234);
+    font-size: larger;
+    border-radius: 8px;
+    border: solid;
+}
+footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 8px;
+    font-size: larger;
+}
