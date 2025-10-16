@@ -1,0 +1,24 @@
+article {
+        font-family: Arial, sans-serif;
+      background-color: #f1f8f1;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #cde3cd;
+    }
+
+    article header {
+      border-bottom: 3px solid #a9d3a9;
+      margin-bottom: 25px;
+      color: #2e6e3e;
+    }
+
+    section {
+      margin-bottom: 20px;
+      color: #3b773b;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #4d704d;
+    }

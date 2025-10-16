@@ -1,0 +1,21 @@
+body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      color: #2b5b84;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    mark {
+      background-color: #ffeb3b;
+      padding: 0 4px;
+      border-radius: 3px;
+    }

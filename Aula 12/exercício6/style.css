@@ -1,0 +1,30 @@
+body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    figure {
+      width: 250px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #f8f8f8;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 6px;
+    }
+ 
+ figcaption {
+      font-style: italic;
+      margin-top: 5px;
+      color: #555;
+    }

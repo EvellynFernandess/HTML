@@ -1,0 +1,14 @@
+ body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #b30000;
+    }
+
+    aside {
+      float: right;
+      background-color: #f0f0f0;
+      border: solid ;
+    }
