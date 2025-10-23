@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Evellyn Fernandes | Portfólio Profissional em Desenvolvimento de Sistemas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -16,7 +14,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e8dcc8 0%, #d4c4b0 100%);
+            /* Fundo principal: Branco */
+            background: #ffffff; 
             color: #333;
             line-height: 1.6;
         }
@@ -27,47 +26,88 @@
             padding: 20px;
         }
 
+        /* NOVO ESTILO PARA O HEADER (Destaque na Introdução) */
         header {
-            text-align: center;
-            padding: 60px 20px;
-            margin-bottom: 40px;
+            text-align: center; 
+            padding: 80px 20px; /* Mais padding vertical */
+            margin-bottom: 50px; /* Mais separação dos blocos seguintes */
+            background: #fcf9f5; /* Fundo levemente creme para destaque visual */
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
+        }
+        /* FIM DO NOVO ESTILO PARA O HEADER */
+
+        .profile-image {
+            width: 220px; /* Levemente maior */
+            height: 220px; 
+            border-radius: 50%; 
+            object-fit: cover;
+            border: 6px solid #8b7355; /* Borda mais grossa e escura */
+            box-shadow: 0 10px 30px rgba(139, 115, 85, 0.3);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(139, 115, 85, 0.5);
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 3.5em; /* Nome maior */
             color: #8b7355;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .subtitle {
-            font-size: 1.3em;
+            font-size: 1.5em; /* Subtítulo maior */
             color: #666;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .school {
             color: #a0826d;
+            font-size: 1.1em;
             font-weight: 600;
         }
 
         .section {
-            background: white;
+            /* Fundo das caixas de tópico: Bege claro e chamativo */
+            background: #f5f0e8; 
             padding: 40px;
             border-radius: 20px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+        }
+
+        /* ESTILO PARA DESTAQUE DA SEÇÃO "PERFIL PROFISSIONAL" (SOBRE MIM) */
+        .profile-section {
+            background: #fcf9f5; 
+            padding: 50px 40px; 
+            border-radius: 20px;
+            margin-bottom: 50px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+        }
+
+        .profile-section h2 {
+             border-bottom: 3px solid #8b7355; 
+        }
+        
+        .profile-section .about {
+            font-size: 1.2em; 
+            color: #444; 
+            line-height: 1.85; 
         }
 
         .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(139, 115, 85, 0.2);
+            transform: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .section:active {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(139, 115, 85, 0.3);
+            transform: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         h2 {
@@ -84,24 +124,30 @@
             gap: 25px;
             margin-top: 20px;
         }
+        
+        @media (min-width: 992px) {
+             .projects-grid {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+
 
         .project-card {
-            background: linear-gradient(135deg, #f5f0e8 0%, #e8dcc8 100%);
+            background: #e8dcc8; 
             padding: 25px;
             border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            position: relative;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(139, 115, 85, 0.3);
+            transform: none;
+            box-shadow: 0 10px 25px rgba(139, 115, 85, 0.2);
         }
 
         .project-card:active {
-            transform: translateY(-20px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(139, 115, 85, 0.4);
+            transform: none;
+            box-shadow: 0 10px 25px rgba(139, 115, 85, 0.2);
         }
 
         .project-title {
@@ -133,7 +179,7 @@
             gap: 15px;
             margin-top: 20px;
         }
-
+        
         .skill-badge {
             background: linear-gradient(135deg, #a0826d 0%, #8b7355 100%);
             color: white;
@@ -143,20 +189,111 @@
             font-size: 1.1em;
             box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
         }
+        
+        .soft-skill-badge {
+             /* Cor mantida com tons de bege para harmonia */
+             background: #d9c7b8; 
+             color: #5a4a42;
+             padding: 12px 25px;
+             border-radius: 25px;
+             font-weight: 600;
+             font-size: 1.1em;
+             box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+        }
+
 
         .about {
             font-size: 1.1em;
             color: #555;
             line-height: 1.8;
         }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: white;
-            font-size: 0.9em;
+        
+        /* Estilo específico para a lista de valores */
+        .value-item {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
         }
 
+        .value-icon {
+            color: #a0826d; 
+            margin-right: 15px;
+            font-size: 1.5em;
+            line-height: 1; 
+        }
+
+        .value-title {
+            font-weight: 700;
+            color: #8b7355;
+            display: block;
+        }
+        
+        .certification-item {
+            padding: 15px 0;
+            border-bottom: 1px dashed #d4c4b0;
+        }
+
+        .certification-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Estilo para o link de certificação */
+        .cert-link {
+            text-decoration: none;
+            color: #8b7355;
+            transition: color 0.3s ease;
+            display: block; /* Para que todo o item seja o link */
+        }
+        
+        .cert-link:hover {
+            color: #a0826d;
+            text-decoration: underline;
+        }
+
+        .cert-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .cert-details {
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        /* ESTILO PARA O RODAPÉ (FOOTER) - Simples e Separado */
+        footer {
+            text-align: center;
+            background: transparent; 
+            padding: 30px; 
+            color: #555; 
+            font-size: 1.1em; 
+            border-top: none; 
+            margin-top: 60px; 
+        }
+
+        .contact-link {
+            background: linear-gradient(135deg, #a0826d 0%, #8b7355 100%); 
+            color: white; 
+            padding: 15px 35px; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 1.1em; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4); 
+            transition: background 0.3s ease;
+        }
+        .contact-link:hover {
+            background: linear-gradient(135deg, #8b7355 0%, #a0826d 100%);
+            transform: none !important;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
@@ -171,119 +308,203 @@
 <body>
     <div class="container">
         <header>
-            <h1>Evellyn Fernandes dos Santos</h1>
-            <p class="subtitle">Desenvolvedora de Sistemas em Formação</p>
-            <p class="school">SENAI - 1º Ano | Técnico em Desenvolvimento de Sistemas</p>
+            <img src="imagemportifólio.jpg" alt="Foto de Perfil de Evellyn Fernandes" class="profile-image">
+            <h1>Evellyn Fernandes</h1>
+            <p class="subtitle">Técnica em Desenvolvimento de Sistemas</p>
+            <p class="school">SENAI - Cursando o 1º Ano</p>
         </header>
 
-        <div class="section">
-            <h2>💻 Sobre Mim</h2>
+        <div class="profile-section">
+            <h2>Perfil Profissional</h2>
             <p class="about">
-                Olá! Sou a Evellyn e estou cursando o primeiro ano de Desenvolvimento de Sistemas no SENAI. 
-                Apaixonada por tecnologia e programação, estou construindo minha jornada no mundo do desenvolvimento, 
-                explorando diferentes linguagens e criando projetos que combinam criatividade e lógica.
+                Estudante de Desenvolvimento de Sistemas no SENAI, com uma base sólida em lógica de programação e 
+                orientação a objetos. Atualmente, foco no desenvolvimento de projetos web (HTML, CSS e JavaScript) 
+                e na construção de sistemas. Busco ativamente oportunidades para aplicar o conhecimento 
+                adquirido em um ambiente profissional desafiador, contribuindo com dedicação e um forte compromisso com a qualidade.
             </p>
         </div>
+        
+        <div class="section">
+            <h2>Valores Profissionais</h2>
+            <div class="values-list">
+                
+                <div class="value-item">
+                    <span class="value-icon"><i class="fas fa-handshake"></i></span>
+                    <div>
+                        <span class="value-title">Honestidade, Sinceridade e Ética:</span>
+                        Compromisso inegociável com a integridade, clareza e transparência em todas as comunicações e códigos desenvolvidos.
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <span class="value-icon"><i class="fas fa-lightbulb"></i></span>
+                    <div>
+                        <span class="value-title">Aprendizado Contínuo:</span>
+                        Busca constante por novas tecnologias, metodologias e certificações para garantir a evolução profissional.
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <span class="value-icon"><i class="fas fa-check-circle"></i></span>
+                    <div>
+                        <span class="value-title">Qualidade e Atenção aos Detalhes:</span>
+                        Foco em entregar soluções robustas, bem testadas e eficientes, minimizando erros e retrabalho.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
 
         <div class="section">
-            <h2>🚀 Meus Projetos</h2>
+            <h2>Certificações e Cursos de Extensão</h2>
+            <div class="certification-list">
+                
+                <div class="certification-item">
+                    <a href="https://www.sp.senai.br/consulta-certificado?qrcode=00044924/7975769" target="_blank" class="cert-link">
+                        <div class="cert-title">Por Dentro da Segurança Cibernética</div>
+                        <div class="cert-details">
+                            SENAI São Paulo | 4 horas | 
+                            Conhecimentos em Engenharia Social, Ameaças Cibernéticas (Vírus, Ransomware) e Segurança em Dispositivos.
+                        </div>
+                    </a>
+                </div>
+
+                <div class="certification-item">
+                    <a href="https://www.sp.senai.br/consulta-certificado?qrcode=00044926/7975769" target="_blank" class="cert-link">
+                        <div class="cert-title">Desvendando a Descarbonização</div>
+                        <div class="cert-details">
+                            SENAI São Paulo | 20 horas | 
+                            Conteúdo programático em Recursos Naturais e Meio Ambiente, Mudanças Climáticas, e Mercado de Carbono.
+                        </div>
+                    </a>
+                </div>
+
+                <div class="certification-item">
+                    <a href="https://www.sp.senai.br/consulta-certificado?qrcode=00044919/7975769" target="_blank" class="cert-link">
+                        <div class="cert-title">Excel Básico</div>
+                        <div class="cert-details">
+                            SENAI São Paulo | 20 horas | 
+                            Habilidades em formatação de dados, uso de fórmulas (soma, multiplicação, porcentagem) e criação de gráficos.
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <a href="https://www.sp.senai.br/consulta-certificado?qrcode=00044921/7975769" target="_blank" class="cert-link">
+                        <div class="cert-title">Competência Transversal - Segurança no Trabalho</div>
+                        <div class="cert-details">
+                            SENAI São Paulo | 14 horas | 
+                            Tópicos abordados incluem acidentes de trabalho, EPI e EPC, e CIPA & Mapa de Risco.
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Competências Técnicas (Hard Skills)</h2>
+            <div class="skills-container">
+                <div class="skill-badge">Git & GitHub (Controle de Versão)</div>
+                <div class="skill-badge">SQL/MySQL (Básico)</div>
+                <div class="skill-badge">JavaScript (Básico)</div>
+                <div class="skill-badge">Lógica de Programação</div>
+                <div class="skill-badge">Redes LAN (Montagem e Configuração)</div>
+                <div class="skill-badge">Cisco</div> 
+                <div class="skill-badge">VS Code</div>
+                <div class="skill-badge">Figma</div>
+                <div class="skill-badge">Segurança Cibernética (Conceitos)</div>
+                <div class="skill-badge">Excel Básico</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Competências Comportamentais (Soft Skills)</h2>
+            <div class="skills-container">
+                <div class="soft-skill-badge">Pensamento Crítico e Adaptabilidade</div>
+                <div class="soft-skill-badge">Metodologias Ágeis (Scrum)</div> 
+                <div class="soft-skill-badge">Comunicação Interpessoal</div>
+                <div class="soft-skill-badge">Gestão de Tempo e Organização</div>
+                <div class="soft-skill-badge">Proatividade e Rápido Aprendizado</div>
+                <div class="soft-skill-badge">Comprometimento e Dedicação</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Projetos Chave</h2>
             
             <div class="projects-grid">
+                
                 <div class="project-card">
-                    <div class="project-title">🌐 Portfólio Pessoal</div>
+                    <div class="project-title">Montagem de Redes LAN</div>
                     <div>
-                        <span class="project-tech">HTML</span>
-                        <span class="project-tech">CSS</span>
+                        <span class="project-tech">Redes LAN</span>
+                        <span class="project-tech">Crimpagem</span>
+                        <span class="project-tech">Topologia de Redes</span>
+                    </div>
+                    <p class="project-description">
+                        Implementação e configuração de redes locais (LAN) com ênfase na prática de cabeamento estruturado. 
+                        Inclui a montagem e crimpagem de conectores RJ-45, testes de conectividade e o planejamento de topologias eficientes.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Desenvolvimento de Portfólio</div>
+                    <div>
                         <span class="project-tech">JavaScript</span>
+                        <span class="project-tech">Figma</span>
+                        <span class="project-tech">VS Code</span>
                     </div>
                     <p class="project-description">
-                        Desenvolvimento de site portfólio responsivo para apresentação de projetos acadêmicos, 
-                        utilizando HTML5 para estrutura, CSS3 para estilização moderna e JavaScript para interatividade.
+                        Criação de portfólio web, demonstrando proficiência em estruturação semântica, estilização moderna e 
+                        design. Ênfase na experiência do usuário e na organização de código front-end.
                     </p>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-title">☕ Aplicações Java</div>
+                    <div class="project-title">Interfaces Web</div>
                     <div>
-                        <span class="project-tech">Java</span>
-                    </div>
-                    <p class="project-description">
-                        Projetos de programação orientada a objetos em Java, incluindo desenvolvimento de sistemas, 
-                        algoritmos e estruturas de dados aplicados em situações práticas do cotidiano.
-                    </p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-title">🎨 Projetos Web</div>
-                    <div>
-                        <span class="project-tech">HTML</span>
-                        <span class="project-tech">CSS</span>
                         <span class="project-tech">JavaScript</span>
+                        <span class="project-tech">Figma</span>
+                        <span class="project-tech">VS Code</span>
                     </div>
                     <p class="project-description">
-                        Desenvolvimento de sites e interfaces web com foco em design responsivo, 
-                        experiência do usuário e boas práticas de programação front-end.
+                        Elaboração de interfaces e layouts web com aderência às melhores práticas de desenvolvimento front-end, 
+                        garantindo compatibilidade e fluidez em diferentes dispositivos (Mobile First).
                     </p>
                 </div>
             </div>
         </div>
-
+        
         <div class="section">
-            <h2>🛠️ Habilidades Técnicas</h2>
-            <div class="skills-container">
-                <div class="skill-badge">Java</div>
-                <div class="skill-badge">HTML5</div>
-                <div class="skill-badge">CSS3</div>
-                <div class="skill-badge">JavaScript</div>
-                <div class="skill-badge">Desenvolvimento Web</div>
-                <div class="skill-badge">Lógica de Programação</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>✨ Habilidades Comportamentais</h2>
-            <div class="skills-container">
-                <div class="skill-badge" style="background: linear-gradient(135deg, #f5e6d3 0%, #d9c7b8 100%); color: #5a4a42;">Trabalho em Equipe</div>
-                <div class="skill-badge" style="background: linear-gradient(135deg, #e8dcc8 0%, #cdbba7 100%); color: #5a4a42;">Comunicação</div>
-                <div class="skill-badge" style="background: linear-gradient(135deg, #f0e5d8 0%, #d4c4b0 100%); color: #5a4a42;">Organização</div>
-                <div class="skill-badge" style="background: linear-gradient(135deg, #ede0d4 0%, #c9b8a3 100%); color: #5a4a42;">Aprendizado Rápido</div>
-                <div class="skill-badge" style="background: linear-gradient(135deg, #e3d5ca 0%, #c2ab93 100%); color: #5a4a42;">Dedicação</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>🎯 Objetivos Profissionais</h2>
+            <h2>Objetivos de Carreira</h2>
             <div class="about">
-                <p style="margin-bottom: 15px;">
-                    🔹 Atuar profissionalmente na área de <strong>Desenvolvimento de Sistemas</strong>, 
-                    aplicando conhecimentos adquiridos e contribuindo para projetos inovadores.
+                 <p style="margin-bottom: 15px;">
+                    🔹Ingressar na Faculdade de Tecnologia da Informação (T.I.), buscando aprimoramento contínuo e especialização.
                 </p>
                 <p style="margin-bottom: 15px;">
-                    🔹 Buscar oportunidades de <strong>estágio em desenvolvimento</strong> para ganhar 
-                    experiência prática e desenvolver habilidades profissionais.
+                    🔹Aplicar as metodologias e padrões de codificação aprendidos na formação técnica no desenvolvimento de sistemas.
                 </p>
                 <p>
-                    🔹 Cursar <strong>graduação em Tecnologia da Informação</strong> após a conclusão 
-                    do técnico, aprofundando conhecimentos e expandindo possibilidades na área tech.
+                    🔹Ingressar em cargos de Desenvolvimento de Software em órgãos públicos via Concurso Público, buscando estabilidade profissional e ascensão na carreira após a conclusão da graduação superior.
                 </p>
             </div>
         </div>
 
         <div class="section">
-            <h2>📬 Contato</h2>
+            <h2>Contato Profissional</h2>
             <div class="about" style="text-align: center;">
                 <p style="font-size: 1.2em; margin-bottom: 20px;">
-                    Interessado em conhecer meu trabalho ou discutir oportunidades?<br>
-                    Entre em contato comigo!
+                    Para propostas de colaboração, oportunidades ou informações adicionais, por favor, entre em contato:
                 </p>
                 <div style="margin-top: 25px; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; align-items: center;">
-                    <a href="mailto:evellynfdossantos08@gmail.com" style="background: linear-gradient(135deg, #a0826d 0%, #8b7355 100%); color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <i class="fas fa-envelope"></i> Email
+                    <a href="mailto:evellynfdossantos08@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i> E-mail Corporativo
                     </a>
-                    <a href="https://github.com/Evellyn Fernandess" target="_blank" style="background: linear-gradient(135deg, #a0826d 0%, #8b7355 100%); color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <i class="fab fa-github"></i> GitHub
+                    <a href="https://github.com/EvellynFernandess" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i> Repositório GitHub
                     </a>
-                    <a href="https://instagram.com/evellyn_.f" target="_blank" style="background: linear-gradient(135deg, #a0826d 0%, #8b7355 100%); color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <a href="https://instagram.com/evellyn_.f" target="_blank" class="contact-link">
                         <i class="fab fa-instagram"></i> Instagram
                     </a>
                 </div>
@@ -291,7 +512,7 @@
         </div>
 
         <footer>
-            <p>© 2025 Evellyn - Portfólio Acadêmico | Desenvolvido com 💜</p>
+            <p>Portfólio Acadêmico e Profissional de Evellyn Fernandes | © 2025.</p>
         </footer>
     </div>
 </body>
