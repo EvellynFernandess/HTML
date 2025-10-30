@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+<link rel="stylesheet" href="">
+<link rel="stylesheet" href="imagens/foto cozinha.jpg">
+<link rel="stylesheet" href="imagens/sala de estar.jpg">
+<link rel="stylesheet" href="imagens/area externa.jpg">
+<link rel="stylesheet" href="imagens/lavanderia.jpg">
+<link rel="stylesheet" href="imagens/quarto.jpg">
+<link rel="stylesheet" href="imagens/jogos.jpg">
+<link rel="stylesheet" href="imagens/Eveimg.jpg">
+<link rel="stylesheet" href="imagens/WhatsApp Image 2025-10-30 at 14.02.15.jpeg">
+<link rel="stylesheet" href="imagens/WhatsApp Image 2025-10-30 at 14.07.57.jpeg">
+<link rel="stylesheet" href="imagens/portfolio.jfif">
+
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- menu -->
+<nav class="w3-sidebar w3-brown w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Fechar Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Aura<br>Designs</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Vitrine</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Serviços</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pacotes</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contato</a>
+  </div>
+</nav>
+
+<!-- menu superior -->
+<header class="w3-container w3-top w3-hide-large w3-brown w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-brown w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Aura Design</span>
+</header>
+
+<!-- Efeito de sobreposição ao abrir a barra lateral em telas pequenas. -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !Conteudo da pagina! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Cabeçalho -->
+  <div class="w3-container" style="margin-top:80px" id="vitrine">
+    <h1 class="w3-jumbo"><b>Aura Design</b></h1>
+    <h1 class="w3-xxxlarge w3-text-brown"><b>Vitrine.</b></h1>
+    <hr style="width:50px;border:5px solid " class="w3-round">
+  </div>
+  
+  <!-- Grade de Fotos (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="/imagens/quarto.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="/imagens/sala de estar.jpg" style="width:100%" onclick="onClick(this)" alt="Design escandinavo leve, branco e compacto.">
+      <img src="/imagens/jogos.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="/imagens/area externa.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="/imagens/foto cozinha.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="/imagens/lavanderia.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+
+  <!-- imagens em tamanho real ao clicar-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Serviços -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-brown"><b>Serviços.</b></h1>
+    <hr style="width:50px;border:5px solid #809671" class="w3-round">
+    <p>Criamos ambientes que combinam o melhor para sua casa e para o seu estilo de vida!.</p>
+    <p>Desenhamos espaços que contam histórias. Do conceito ao acabamento, criamos ambientes que equilibram estética, conforto e praticidade. Nosso foco é oferecer soluções sob medida, pensadas para valorizar seu estilo de vida e o melhor do seu lar.t.
+    </p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px" >
+    <h1 class="w3-xxxlarge w3-text-brown"><b>Designers.</b></h1>
+    <hr style="width:50px;border:5px solid #809671" class="w3-round">
+    <p>O melhor time do mundo.</p>
+    <p>Somos um time de designers comprometidos em transformar espaços de forma inteligente e elegante. Cada projeto é pensado com atenção, criatividade e propósito, unindo estética, funcionalidade e estilo de vida em cada detalhe.
+    </p>
+    <p><b>Cada designer da nossa equipe é cuidadosamente selecionado para criar experiências únicas.</b>:</p>
+  </div>
+
+  <!-- O time -->
+ <div class="w3-row-padding w4-grayscale w3-center">
+  <!-- Designer 1 -->
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="/imagens/Eveimg.jpg" alt="Eve" style="width:100%; height:250px; object-fit:cover;">
+      <div class="w3-container">
+        <h3>Evellyn Fernandes</h3>
+        <p class="w3-opacity">CEO & Founder</p>
+        <p>Evellyn lidera nosso time com propósito e criatividade, unindo estética, funcionalidade e identidade em cada projeto.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Designer 2 -->
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="/imagens/WhatsApp Image 2025-10-30 at 14.02.15.jpeg" alt="Ana" style="width:100%; height:250px; object-fit:cover;">
+      <div class="w3-container">
+        <h3>Ana Luiza Silva</h3>
+        <p class="w3-opacity">Designer</p>
+        <p>Ana cria interfaces limpas e elegantes, garantindo que cada visitante tenha uma experiência digital fluida e inspiradora.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Designer 3 -->
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="/imagens/portfolio.jfif" alt="Julia" style="width:100%; height:250px; object-fit:cover;">
+      <div class="w3-container">
+        <h3>Julia Aparecida</h3>
+        <p class="w3-opacity">Arquiteta</p>
+        <p>Julia cria projetos elegantes e funcionais, equilibrando estética e praticidade em cada detalhe.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Designer 4 -->
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="/imagens/WhatsApp Image 2025-10-30 at 14.07.57.jpeg" alt="Isabella" style="width:100%; height:250px; object-fit:cover;">
+      <div class="w3-container">
+        <h3>Isabella</h3>
+        <p class="w3-opacity">Designer</p>
+        <p>Isabella transforma espaços em experiências acolhedoras e inspiradoras, unindo elegância e funcionalidade.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Pacotes -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-brown"><b>Pacotes.</b></h1>
+    <hr style="width:50px;border:5px solid #809671" class="w3-round">
+    <p>Confira nossos preços e escolha o pacote que melhor se adapta ao seu projeto. Oferecemos serviços personalizados para transformar cada ambiente com criatividade, conforto e estilo.</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basico</li>
+        <li class="w3-padding-16">Planejamento de espaço</li>
+        <li class="w3-padding-16">10 horas de suporte</li>
+        <li class="w3-padding-16">Fotografia</li>
+        <li class="w3-padding-16">20% de desconto em móveis</li>
+        <li class="w3-padding-16">Ofertas especiais</li>
+        <li class="w3-padding-16">
+          <h2>R$ 199</h2>
+          <span class="w3-opacity">por cômodo</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black">Assinar</button>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-brown w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Planejamento de espaço</li>
+        <li class="w3-padding-16">50 horas de suporte</li>
+        <li class="w3-padding-16">Fotografia</li>
+        <li class="w3-padding-16">50% de desconto em móveis</li>
+        <li class="w3-padding-16">Ofertas incríveis</li>
+        <li class="w3-padding-16">
+          <h2>R$ 249</h2>
+          <span class="w3-opacity">por cômodo</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-brown w3-padding-large w3-hover-black">Inscrever-se
+            
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contato -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-brown"><b>Contato.</b></h1>
+    <hr style="width:50px;border:5px solid #809671" class="w3-round">
+    <p style="text-align;">Quer que a gente decore o seu lar? Preencha o formulário abaixo e conte todos os detalhes! :) Amamos conhecer novas pessoas e ouvir suas ideias!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Nome</label>
+        <input class="w3-input w3-border" type="text" name="Name" requibrown style="width: 500px;">
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" requibrown style="width: 500px";> 
+      </div>
+      <div class="w3-section">
+        <label>Mensagem</label>
+        <input class="w3-input w3-border" type="text" name="Message" requibrown style="width: 500px;">
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-brown w3-margin-bottom" style="width: 500px;" >Enviar mensagem</button>
+    </form>  
+  </div>
+
+<!-- conteudo final -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Desenvolvido por
+Criado por <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("zzzzzz").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
