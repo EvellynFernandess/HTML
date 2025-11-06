@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligência Artificial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+            color: #1976d2;
+            text-align: center;
+            padding: 70px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shine 4s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+
+        header h1 {
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            font-weight: 300;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-style: italic;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+            position: relative;
+            color: #1565c0;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #1976d2;
+            text-decoration: none;
+            font-size: 1.05em;
+            padding: 18px 30px;
+            display: block;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav ul li a:hover {
+            background-color: #e3f2fd;
+            color: #1565c0;
+            border-bottom: 3px solid #64b5f6;
+        }
+
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 60px 50px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        section h2 {
+            color: #42a5f5;
+            font-size: 2.5em;
+            margin-bottom: 35px;
+            text-align: left;
+            border-left: 5px solid #90caf9;
+            padding-left: 20px;
+            font-weight: 500;
+        }
+
+        section p {
+            font-size: 1.15em;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #444;
+            line-height: 2;
+        }
+
+        .video-section {
+            background: linear-gradient(135deg, #1a1f3a 0%, #0a0e27 100%);
+            color: white;
+        }
+
+        .video-section h2 {
+            color: #00d4ff;
+            border-left: 6px solid #518bd1;
+        }
+
+        .video-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .video-card {
+            flex: 1;
+            min-width: 450px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .video-card h3 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        .video-card p {
+            color: #ccc;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .video-card .author {
+            color: #00d4ff;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .aplicacoes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .aplicacao-card {
+            background: linear-gradient(145deg, #f8f9fa, #ffffff);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #00083a;
+        }
+
+        .aplicacao-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0, 153, 255, 0.2);
+            border-left-color: #0099ff;
+        }
+
+        .aplicacao-card h3 {
+            color: #0099ff;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .aplicacao-card p {
+            color: #555;
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        footer {
+            background: linear-gradient(to right, #1a1f3a, #0a0e27);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 12px 0;
+            color: #ccc;
+            font-size: 1.1em;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #0099ff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1024px) {
+            .aplicacoes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                padding: 15px;
+            }
+
+            section {
+                padding: 40px 25px;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+
+            .video-container {
+                flex-direction: column;
+            }
+
+            .video-card {
+                min-width: 100%;
+            }
+
+            .aplicacoes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inteligência Artificial</h1>
+        <p>Transformando o presente, construindo o futuro</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#o-que-e">O que é IA?</a></li>
+            <li><a href="#videos">Vídeos</a></li>
+            <li><a href="#aplicacoes">Aplicações</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <section id="o-que-e">
+            <h2>O que é Inteligência Artificial?</h2>
+            <p>
+                A Inteligência Artificial (IA) é um ramo da ciência da computação que se dedica a criar sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana. Esses sistemas são projetados para aprender, raciocinar, perceber e tomar decisões de forma autônoma, utilizando algoritmos complexos e grandes volumes de dados.
+            </p>
+            <p>
+                Desde seu surgimento na década de 1950, a IA evoluiu drasticamente. Hoje, ela está presente em diversas áreas do nosso cotidiano, desde assistentes virtuais em nossos smartphones até sistemas avançados de diagnóstico médico. A IA utiliza técnicas como machine learning (aprendizado de máquina) e deep learning (aprendizado profundo) para identificar padrões e melhorar seu desempenho ao longo do tempo.
+            </p>
+            <p>
+                O objetivo principal da IA é criar máquinas que possam simular capacidades humanas como compreensão de linguagem natural, reconhecimento de imagens, resolução de problemas complexos e até mesmo criatividade. Com o avanço da tecnologia, a IA está se tornando cada vez mais sofisticada, abrindo possibilidades inimagináveis há poucos anos e transformando completamente a forma como vivemos, trabalhamos e nos relacionamos com a tecnologia.
+            </p>
+        </section>
+
+        <section id="videos" class="video-section">
+            <h2>Vídeos sobre Inteligência Artificial</h2>
+            <div class="video-container">
+                <div class="video-card">
+                    <h3>Inteligência Artificial - Explicação Completa</h3>
+                    <iframe src="https://www.youtube.com/embed/UhA_ZgI-otM?si=P5FQVXHbL29Wn-oz" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>
+                        Este vídeo apresenta uma explicação didática e completa sobre Inteligência Artificial, abordando desde conceitos básicos até aplicações práticas. Perfeito para iniciantes que desejam entender como a IA funciona e seu impacto no mundo.
+                    </p>
+                    <p class="author">Canal: Programação Dinâmica</p>
+                </div>
+
+                <div class="video-card">
+                    <h3>Como a Inteligência Artificial Funciona?</h3>
+                    <iframe src="https://www.youtube.com/embed/b9HzilHAIbs?si=xsy0X4YzZzS0Gwn9" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>
+                        Documentário educativo que explora o funcionamento da Inteligência Artificial de forma acessível. O vídeo mostra exemplos práticos, aplicações no cotidiano e discute o futuro da tecnologia e suas implicações para a sociedade.
+                    </p>
+                    <p class="author">Canal: Manual do Mundo</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="aplicacoes">
+            <h2>Aplicações da Inteligência Artificial</h2>
+            <div class="aplicacoes-grid">
+                <div class="aplicacao-card">
+                    <h3>🎤 Assistentes Virtuais</h3>
+                    <p>Siri, Alexa e Google Assistant usam IA para entender comandos de voz e responder perguntas, facilitando tarefas do dia a dia.</p>
+                </div>
+
+                <div class="aplicacao-card">
+                    <h3>🚗 Carros Autônomos</h3>
+                    <p>Veículos que dirigem sozinhos utilizando sensores e algoritmos de IA para navegar com segurança pelas ruas.</p>
+                </div>
+
+                <div class="aplicacao-card">
+                    <h3>🎬 Recomendação de Conteúdo</h3>
+                    <p>Netflix, Spotify e YouTube analisam seus hábitos para sugerir filmes, músicas e vídeos personalizados.</p>
+                </div>
+
+                <div class="aplicacao-card">
+                    <h3>🏥 Diagnóstico Médico</h3>
+                    <p>Sistemas de IA auxiliam médicos a identificar doenças através da análise de exames e imagens com alta precisão.</p>
+                </div>
+
+                <div class="aplicacao-card">
+                    <h3>💳 Detecção de Fraudes</h3>
+                    <p>Bancos utilizam IA para identificar padrões suspeitos em transações e prevenir fraudes financeiras em tempo real.</p>
+                </div>
+
+                <div class="aplicacao-card">
+                    <h3>🌐 Tradução Automática</h3>
+                    <p>Google Tradutor e outros serviços usam IA para traduzir textos e conversas entre diversos idiomas instantaneamente.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contato">
+        <p><strong>Desenvolvido por:</strong> João Silva</p>
+        <p><strong>Data:</strong> 06 de Novembro de 2025</p>
+        <p><strong>Contato:</strong> <a href="mailto:joao.silva@email.com">joao.silva@email.com</a></p>
+        <p style="margin-top: 25px; font-size: 0.95em; opacity: 0.7;">© 2025 - Projeto Educacional sobre Inteligência Artificial</p>
+    </footer>
+</body>
+</html>
