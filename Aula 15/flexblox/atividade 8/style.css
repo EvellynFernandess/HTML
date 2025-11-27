@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item{
+    background: rgb(134, 0, 0);
+    color: white;
+    background-color: brown;
+    height: 200px;
+    width: 200px;
+}

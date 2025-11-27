@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.item{
+    background: rgb(134, 0, 0);
+    color: white;
+    background-color: brown;
+    height: 100px;
+    width: 500px;
+}

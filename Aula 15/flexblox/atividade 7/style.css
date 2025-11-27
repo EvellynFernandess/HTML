@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+}
+.item{
+    background: rgb(134, 0, 0);
+    color: white;
+    background-color: brown;
+    height: 200px;
+    width: 200px;
+}

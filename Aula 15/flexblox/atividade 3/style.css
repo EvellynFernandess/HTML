@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    flex-direction: row-reverse;
+
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    height: 200px;
+    width: 200px;
+    color: white;
+}
